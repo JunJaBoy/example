@@ -59,5 +59,23 @@ public class Main {
         System.out.printf("%d %d", n, m);
     }*/
     //1014
+    /*static Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) {
+        char n = sc.next().charAt(0);
+        char m = sc.next().charAt(0);
+        System.out.printf("%c %c", m, n);
+    }*/
+    //1015
+    /*static Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) {
+        float n = sc.nextFloat();
+        System.out.printf("%.2f", n);
+    }*/
+    //1017
+    static Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) {
+        int n = sc.nextInt();
+        System.out.printf("%d %d %d", n, n, n);
+    }
 
 }
