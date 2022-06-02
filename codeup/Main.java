@@ -72,10 +72,32 @@ public class Main {
         System.out.printf("%.2f", n);
     }*/
     //1017
-    static Scanner sc = new Scanner(System.in);
+    /*static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         int n = sc.nextInt();
         System.out.printf("%d %d %d", n, n, n);
+    }*/
+    //1018
+    /*static Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) {
+        String t[] = sc.next().split(":");
+        System.out.println(t[0]+":"+t[1]);//t[0](시간)값과 :, t[1](분)값 출력
+    }*/
+    //1019
+    /*static Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) {
+        String date[] = sc.nextLine().split("[.]");
+        int y = Integer.parseInt(date[0]);
+        int m = Integer.parseInt(date[1]);
+        int d = Integer.parseInt(date[2]);
+        System.out.printf("%04d.%02d.%02d", y, m, d);
+    }*/
+    //1020
+    static Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) {
+        String num[] = sc.nextLine().split("[-]");
+        int a = Integer.parseInt(num[0]);
+        int b = Integer.parseInt(num[1]);
+        System.out.println(num[0]+num[1]);
     }
-
 }
