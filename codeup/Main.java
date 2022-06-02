@@ -93,11 +93,25 @@ public class Main {
         System.out.printf("%04d.%02d.%02d", y, m, d);
     }*/
     //1020
-    static Scanner sc = new Scanner(System.in);
+    /*static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         String num[] = sc.nextLine().split("[-]");
         int a = Integer.parseInt(num[0]);
         int b = Integer.parseInt(num[1]);
         System.out.println(num[0]+num[1]);
-    }
+    }*/
+    //1021
+    /*static Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) {
+        String s = sc.next(); //String 변수 선언 및 스캐너 변수(sc)로 next 값 입력
+        System.out.println(s);
+    }*/
+    //1022
+    /*static Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) {
+        String s = sc.nextLine(); //배열 s에 스캐너(sc)로 한 줄(nextLine())로 엔터 전 까지의 값을 모두 입력받아 저장
+        System.out.println(s);
+    }*/
+    //1023
+    static Scanner sc = new Scanner(System.in);
 }
