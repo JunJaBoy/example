@@ -1,4 +1,10 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Optional;
 import java.util.Scanner;
+
+import static jdk.nashorn.internal.objects.NativeMath.max;
 
 public class Main {
     //1
@@ -190,24 +196,114 @@ public class Main {
         if (h > 23){h -=24;}
         System.out.println(h + " " + m);
     }*/
-    //2480++_+_+_+_+안풀었음
+    //2480
+    /*static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+
+        if ((a == b) && (b == c)) { //a, b, c 모두 같은 경우
+            System.out.println(10000 + (a * 1000));
+        } else if ((a == b) || (b == c)) { //a, b만 또는 b, c만 같은 경우
+            System.out.println(1000 + (b * 100));
+        } else if (a == c) {  //a, c만 같은 경우
+            System.out.println(1000 + (a * 100));
+        } else { //그 외의 경우
+            System.out.println(Math.max(a, Math.max(b, c)) * 100); // Math.max 함수로 최대값을 구한 후 출력
+        }
+    }*/
+    //3
+    //2739
+    /*static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int n = sc.nextInt();
+        for (int i = 1; i <= 9; i++) {
+            System.out.println(n + " * " + i + " = " + (n * i));
+        }
+    }*/
+    //10950
+    /*static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int n = sc.nextInt();
+        int[] arr = new int[999];
+        int[] brr = new int[999];
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+            brr[i] = sc.nextInt();
+        }
+        for (int i = 0; i < n; i++) {
+            System.out.println((arr[i] + brr[i]));
+        }
+    }*/
+    //8393
+    /*static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int a = sc.nextInt();
+        int cnt = 0;
+
+        for (int i = 1; i <= a; i++) {
+            cnt += i;
+        }
+        System.out.println(cnt);
+    }*/
+    //15552
+    /*  static BufferedReader bf = new BufferedReader(new InputStreamReader(System.in)); //버퍼 선언
+    static StringBuilder sb = new StringBuilder(); //string 선언
+    //https://st-lab.tistory.com/30
+    public static void main(String[] args) throws IOException {
+        int n = Integer.parseInt(bf.readLine()); //buffer로 Int 입력
+        for (int i = 0; i < n; i++) {
+            String str = bf.readLine(); //buffer로 string형 변수 str 입력
+            int target = str.indexOf(" "); //str에 공백(" ")이 있다면 공백의 배열 위치를 반환, 없으면 -1 반환
+            int result = Integer.parseInt(str.substring(0, target)) + Integer.parseInt(str.substring(target + 1));
+            //substring으로 (시작값, 길이)(0, target)까지만 잘라서 target까지의 string을 잘라낸 후, 나머지 target(공백) 뒤의 수를 더한다
+            // (+1하는 이유는 배열이기 때문에 0부터 시작)
+
+            sb.append(result+"\n"); //append : 기존 문자열 맨 마지막에 새로운 문자열을 붙이는 함수, result에 줄바꿈을 추가한다
+        }
+        bf.close(); //bf 메소드를 닫아 누수를 방지한다
+        System.out.print(sb); //sb string을 출력한다
+    }*/
+    //2741
+    /*static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int a = sc.nextInt();
+        for (int i = 1; i <= a; i++) {
+            System.out.println(i);
+        }
+    }*/
+    //2742
+    /*static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int n = sc.nextInt();
+
+        for (int i = n; i >= 1; i--) {
+            System.out.println(i);
+        }
+    }*/
+    //11021
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int[] n = new int[3];
-        int cnt = 0;
-        for (int i=0; i < 3; i ++) {
-            n[i] = Integer.parseInt(sc.next());
+        int a = sc.nextInt();
+        int[] arr = new int[999];
+        int[] brr = new int[999];
+
+        for (int i = 0; i < a; i++) {
+            arr[i] = sc.nextInt();
+            brr[i] = sc.nextInt();
         }
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                if (n[i] - n[j] == 0) {
-                    cnt++;
-                } else {
-                    break;
-                }
-            }
+
+        for (int i = 0; i < a; i++) {
+            System.out.println("Case " + "#" + (i + 1) + ": " + (arr[i] + brr[i]));
         }
-        System.out.println(cnt);
     }
 }
