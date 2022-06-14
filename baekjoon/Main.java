@@ -290,7 +290,7 @@ public class Main {
         }
     }*/
     //11021
-    static Scanner sc = new Scanner(System.in);
+    /*static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
         int a = sc.nextInt();
@@ -305,5 +305,72 @@ public class Main {
         for (int i = 0; i < a; i++) {
             System.out.println("Case " + "#" + (i + 1) + ": " + (arr[i] + brr[i]));
         }
-    }
+
+    }*/
+    //11022
+    /*static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int n = sc.nextInt();
+        int[] arr = new int[999];
+        int[] brr= new int[999];
+
+        for (int i= 0;i < n; i++) {
+            arr[i] = sc.nextInt();
+            brr[i] = sc.nextInt();
+        }
+        for (int i = 0; i < n; i++) {
+            System.out.println("Case #" + (i+1) + ": " + arr[i] + " + " + brr[i] + " = " + (arr[i] + brr[i]));
+        }
+    }*/
+    //2438
+    /*static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int n = sc.nextInt();
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.printf("*");
+            }
+            System.out.printf("\n");
+        }
+    }*/
+    //2439
+    /*static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int n = sc.nextInt();
+        for (int i = 1; i <= n; i++) {
+            for (int j = n - i; j > 0; j--) {
+                System.out.printf(" ");
+            }
+            for (int j = 0; j < i; j++) {
+                System.out.printf("*");
+            }
+            System.out.printf("\n");
+        }
+    }*/
+    //10871
+    //1 scanner(런타임에러)
+    /*static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int n = sc.nextInt();
+        int a = sc.nextInt();
+        int[] arr = new int[99];
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        for (int i = 0; i < n; i++) {
+            if (arr[i] < a) {
+                System.out.printf("%d ", arr[i]);
+            }
+        }
+    }*/
+    //2
+
+
+
+
 }
