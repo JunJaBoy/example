@@ -1,8 +1,7 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.Optional;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 import static jdk.nashorn.internal.objects.NativeMath.max;
 
@@ -351,26 +350,68 @@ public class Main {
         }
     }*/
     //10871
-    //1 scanner(런타임에러)
     /*static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
         int n = sc.nextInt();
         int a = sc.nextInt();
-        int[] arr = new int[99];
+        int[] arr = new int[n]; //arr배열의 길이를 한정해주지 않으면 런타임이 너무 길어져 오류가 발생했다. 입력받을 숫자의 개수인 n은 배열의 길이와 갇기에 길이를 n으로 설정해준다
 
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
+
+        sc.close();
+
         for (int i = 0; i < n; i++) {
             if (arr[i] < a) {
-                System.out.printf("%d ", arr[i]);
+                System.out.print(arr[i] + " ");
             }
         }
     }*/
-    //2
+    //10952
+    /*static Scanner sc = new Scanner(System.in);
 
+    public static void main(String[] args) {
+        int a, b;
+        for (int i = 0; ; i++) {
+            a = sc.nextInt();
+            b = sc.nextInt();
+            if (a == 0 && b == 0) { break; }
+            System.out.println(a + b);
+        }
+    }*/
+    //10951
+    /*static Scanner  sc = new Scanner(System.in);
+    //계속해서 정수를 입력받고, 합을 출력한다. 정수 외의 수가 입력되면 종료된다
+    public static void main(String[] args) {
+        int a, b;
+        while (sc.hasNextInt()) { //hasNextInt로 참을 반환하여 true(1)이면 다음 입력이 정수일 동안(while) 반복문을 실행한다 (false(0)이 반환되면 반복문을 멈춘다)
+            a = sc.nextInt(); //a를 입력받는다
+            b = sc.nextInt(); //b를 입력받는다
+            System.out.println(a + b); //a + b를 출력한다
+        }
+    }*/
+    //1110
+    static Scanner sc = new Scanner(System.in);
 
+    public static void main(String[] args) {
+        int a = sc.nextInt();
+        int l, n, m, nn;
+        int cnt = 0;
+        nn = a;
 
+        if (a > 9) {
+            for (int i = 0; i < 5; i++) {
+                n = (nn / 10);
+                l = nn - n;
+                m = n + l;
+                nn = n * 10 + m;
+                System.out.println(nn);
+                if (nn == a) {break;}
+                cnt++;
+            }
+        }
 
+    }
 }
