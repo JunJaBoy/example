@@ -396,22 +396,16 @@ public class Main {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int a = sc.nextInt();
-        int l, n, m, nn;
+        int N = sc.nextInt();
+        int cpy = N;
         int cnt = 0;
-        nn = a;
 
-        if (a > 9) {
-            for (int i = 0; i < 5; i++) {
-                n = (nn / 10);
-                l = nn - n;
-                m = n + l;
-                nn = n * 10 + m;
-                System.out.println(nn);
-                if (nn == a) {break;}
-                cnt++;
-            }
-        }
+        do {
+            cpy = ((cpy % 10) * 10) + (((cpy / 10) + (cpy % 10)) % 10);
+            cnt++;
+        } while (cpy != N);
+
+        System.out.println(cnt);
 
     }
 }
