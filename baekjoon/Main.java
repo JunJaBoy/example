@@ -393,10 +393,10 @@ public class Main {
         }
     }*/
     //1110
-    static Scanner sc = new Scanner(System.in);
+    /*static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int N = sc.nextInt();
+        int N =     sc.nextInt();
         int cpy = N;
         int cnt = 0;
 
@@ -407,5 +407,33 @@ public class Main {
 
         System.out.println(cnt);
 
-    }
+    }*/
+    //10818
+    /*static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        Arrays.sort(arr); //sort로 arr배열 내의 값을 크기가 작은 순으로 정렬
+        System.out.printf("%d %d", arr[0], arr[n - 1]);
+    }*/
+    //2562
+    /*static Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) {
+        int[] arr = new int[9];
+        int max = 0, index = 0;
+        for (int i = 0; i < 9; i++) {
+            arr[i] = sc.nextInt();
+            if (arr[i] > max) {
+                max = arr[i];
+                index = i + 1;
+            }
+        }
+        System.out.println(max + "\n" + index);
+    }*/
 }
