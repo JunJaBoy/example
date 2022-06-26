@@ -1,7 +1,9 @@
+import com.sun.org.apache.xpath.internal.objects.XNull;
+
 import java.io.*;
-import java.util.Optional;
-import java.util.Scanner;
-import java.util.StringTokenizer;
+import java.util.*;
+import java.util.Arrays;
+import java.util.stream.Stream;
 
 import static jdk.nashorn.internal.objects.NativeMath.max;
 
@@ -396,7 +398,7 @@ public class Main {
     /*static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int N =     sc.nextInt();
+        int N = sc.nextInt();
         int cpy = N;
         int cnt = 0;
 
@@ -436,4 +438,25 @@ public class Main {
         }
         System.out.println(max + "\n" + index);
     }*/
+    //2577
+    static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int n1 = sc.nextInt();
+        int n2 = sc.nextInt();
+        int n3 = sc.nextInt();
+
+        sc.close(); //n1 n2 n3 입력 후 스캐너 닫기
+
+        int t = n1 * n2 * n3;
+        int[] num = new int[10]; //숫자를 담을 10자리 배열(0 ~ 9) 선언
+
+        while (t > 0) { //t가 0보다 작을 동안 반복
+            num[t % 10]++; //t를 10으로 나눈 나머지 = 일의 자리 수, 0~9 값중 해당 수의 값 1 증가
+            t /= 10; //t를 10으로 나누어서 다음 자리수 대비
+        }
+        for (int i = 0; i < 10; i++) {
+            System.out.println(num[i]);
+        }
+    }
 }
