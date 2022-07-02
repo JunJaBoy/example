@@ -439,7 +439,7 @@ public class Main {
         System.out.println(max + "\n" + index);
     }*/
     //2577
-    static Scanner sc = new Scanner(System.in);
+    /*static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
         int n1 = sc.nextInt();
@@ -457,6 +457,85 @@ public class Main {
         }
         for (int i = 0; i < 10; i++) {
             System.out.println(num[i]);
+        }
+    }*/
+    //3052
+    /*static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        HashSet<Integer> h = new HashSet<Integer>(); //HashSet : 중복되는 수들이 있는 경우, 하나를 제외한 나머지 수들을 없애고 HashSet에 저장
+
+        for (int i = 0; i < 10; i++) {
+            h.add(sc.nextInt() % 42); //입력받은 수를 42로 나눈 나머지를 add 메소드를 통해 Hashset에 저장
+        }
+
+        System.out.println(h.size());
+    }*/
+    //1546
+    /*static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int n = sc.nextInt();
+        double[] arr = new double[n];
+        double max = 0;
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        arr[0] = arr[0] / max * 100;
+        for (int i = 1; i < n; i++) {
+            arr[0] += arr[i] / max * 100;
+        }
+        System.out.println(arr[0] / n);
+    }*/
+    //8958
+    /*static Scanner sc = new Scanner(System.in);
+
+    //https://st-lab.tistory.com/50
+    public static void main(String[] args) {
+        String[] arr = new String[sc.nextInt()]; // 입력 받는 크기만큼의 문자형 배열 선언
+
+        for (int i = 0; i < arr.length; i++) { // 문자형 배열에 OX 값 대임
+            arr[i] = sc.next();
+        }
+
+        for (int i = 0; i < arr.length; i++) {
+            int rst = 0;
+            int cnt = 0;
+
+            for (int j = 0; j < arr[i].length(); j++) {
+                if (arr[i].charAt(j) == 'O') { // 배열[i]의 현재 인덱스[j]값이 'O'면, cnt를 증가시킨다
+                    cnt++;
+                } else { // 배열[i]의 현재 인덱스[j]값이 'O'가 아니면, cnt를 0으로 초기화한다
+                    cnt = 0;
+                }
+                rst += cnt; // if, else문을 거치고, cnt의 값을 결과값에 대입한다
+            }
+            System.out.println(rst);
+        }
+    }*/
+    //4344
+    static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int c = sc.nextInt();
+        for (int i = 0; i < c; i++) {
+            double[] arr = new double[sc.nextInt()];
+            double cnt = 0;
+            double cnt2 = 0;
+            for (int j = 0; j < arr.length; j++) {
+                arr[j] = sc.nextInt();
+                cnt += arr[j];
+            }
+            cnt /= arr.length;
+            for (int j = 0; j < arr.length; j++) {
+                if (arr[j] > cnt) {
+                    cnt2++;
+                }
+            }
+            System.out.printf("%.3f%%\n", cnt2 / arr.length * 100);
         }
     }
 }
