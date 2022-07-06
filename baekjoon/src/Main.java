@@ -1,11 +1,7 @@
-import com.sun.org.apache.xpath.internal.objects.XNull;
-
-import java.io.*;
 import java.util.*;
-import java.util.Arrays;
-import java.util.stream.Stream;
 
 import static jdk.nashorn.internal.objects.NativeMath.max;
+import static jdk.nashorn.internal.objects.NativeString.charAt;
 
 public class Main {
     //1
@@ -517,7 +513,7 @@ public class Main {
         }
     }*/
     //4344
-    static Scanner sc = new Scanner(System.in);
+    /*static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
         int c = sc.nextInt();
@@ -537,5 +533,102 @@ public class Main {
             }
             System.out.printf("%.3f%%\n", cnt2 / arr.length * 100);
         }
+    }*/
+    //5
+    //15596
+    /*long sum(int[] a){
+        int n = 0;
+        for (int i = 0; i < a.length; i++) {
+            n += a[i];
+        }
+        return n;
+    }*/
+    //4673
+    /*static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        boolean[] check = new boolean[10001];
+        for (int i = 0; i <= 10000; i++) {
+            int n = snum(i);
+            if (n <= 10000) {
+                check[n] = true;
+            }
+        }
+        for (int i = 0; i <= 10000; i++) {
+            if (check[i] != true) {
+                System.out.println(i);
+            }
+        }
     }
+
+    public static int snum(int a) {
+        int f = a;
+
+        while (a != 0) {
+            f += (a % 10);
+            a /= 10;
+        }
+        return f;
+    }*/
+    //1065
+    /*static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        System.out.println(sequence(sc.nextInt()));
+
+    }
+
+
+    public static int sequence(int num) {
+        int cnt = 0;
+
+        if (num < 100) {
+            return num;
+        } else {
+            cnt = 99;
+
+            for (int i = 100; i <= num; i++) {
+                int h = i / 100;
+                int t = (i / 10) % 10;
+                int o = i % 10;
+                if (h - t == t - o) {
+                    cnt++;
+                }
+            }
+        }
+        return cnt;
+    }*/
+    //6
+    //11654
+    /*public static void main(String[] args) throws IOException {
+        int a = System.in.read();
+        System.out.printf("%d", a);
+    }*/
+    //1170
+    /*static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int a = sc.nextInt();
+        String str = sc.next();
+
+        int cnt = 0;
+
+        for (int i = 0; i < a; i++) {
+            cnt += str.charAt(i) - '0'; // charAt(i)으로 str 문자열을 문자로 치환하고, 0을 빼서 숫자로 만든다
+        }
+
+        System.out.println(cnt);
+    }*/
+    //10809
+    static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int[] arr = new int[26];
+
+
+
+    }
+
+
+
 }

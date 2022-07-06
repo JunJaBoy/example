@@ -126,6 +126,12 @@ public class Schooool {
             }
         }
     }*/
+    //20220705
+    static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+
+    }
 
 
     //백준 1546
