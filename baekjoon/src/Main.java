@@ -623,12 +623,20 @@ public class Main {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int[] arr = new int[26];
-
-
+        int[] arr = new int[26]; // 각 알파벳의 처음 위치를 지정해 줄 길이 26의 정수형 배열
+        String s = sc.nextLine();
+        for (int i = 0; i < arr.length; i++) { // 배열 전체를 -1로 초기화한다
+            arr[i] = -1;
+        }
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i); // ch 문자형 변수에 s의 i번째 문자를 지정한다. 수명은 for문이 한 번 돌 때 까지이다.
+            if (arr[ch - 'a'] == -1) { // ch 에서 a(97)을 뺀 번호의 인덱스를 가지고 있는 arr의 값을 식별한다. arr의 ch-'a'번째 인덱스가 -1이면 if문 내의 구문을 실행한다.
+                arr[ch - 'a'] = i; // i(해당 글자가 등장한 위치)를 arr에 넣어준다. 만약 현재 인덱스보다 먼저 해당 글자가 등장했다면 if문 내부 실행 없이 넘어감으로, 처음 등장한 인덱스의 값을 가지게 된다.
+            }
+        }
+        for (int i = 0; i < arr.length; i++) {
+            System.out.printf(arr[i] + " ");
+        }
 
     }
-
-
-
 }
