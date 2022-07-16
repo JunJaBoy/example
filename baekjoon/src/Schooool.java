@@ -126,12 +126,6 @@ public class Schooool {
             }
         }
     }*/
-    //20220705
-    static Scanner sc = new Scanner(System.in);
-
-    public static void main(String[] args) {
-
-    }
 
 
     //백준 1546
@@ -187,4 +181,59 @@ public class Schooool {
         for (int i = a; i <= b; i++) {
         }
     }*/
+    //1009
+    /*static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int n = sc.nextInt();
+
+        for (int i = 0; i < n; i++) {
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            int temp = 1;
+            for (int j = 0; j < b; j++) {
+                temp *= a;
+                temp %= 10;
+            }
+            if (temp % 10 == 0) {
+                temp = 10;
+            }
+            System.out.println(temp);
+        }
+    }*/
+    //10757
+    static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        String str1 = sc.next();
+        String str2 = sc.next();
+
+
+        int leng = Math.max(str1.length(), str2.length());
+
+        int[] arr = new int[leng + 1];
+        int[] brr = new int[leng + 1];
+
+        for (int i = str1.length() - 1, idx = 0; i >= 0; i--, idx++) {
+            arr[idx] = str1.charAt(i) - '0';
+        }
+        for (int i = str2.length() - 1, idx = 0; i >= 0; i--, idx++) {
+            brr[idx] = str2.charAt(i) - '0';
+        }
+
+        for (int i = 0; i < leng; i++) {
+            int res = arr[i] + brr[i];
+            arr[i] = res % 10;
+            arr[i + 1] += (res / 10);
+        }
+
+        StringBuilder sb = new StringBuilder();
+        if (arr[leng] != 0) {
+            sb.append(arr[leng]);
+        }
+        for (int i = leng - 1; i >= 0; i--) {
+            sb.append(arr[i]);
+        }
+        System.out.println(sb);
+    }
 }
