@@ -1,3 +1,10 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.lang.reflect.Array;
+import java.math.BigInteger;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 import static jdk.nashorn.internal.objects.NativeMath.max;
@@ -620,7 +627,7 @@ public class Main {
         System.out.println(cnt);
     }*/
     //10809
-    static Scanner sc = new Scanner(System.in);
+    /*static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
         int[] arr = new int[26]; // 각 알파벳의 처음 위치를 지정해 줄 길이 26의 정수형 배열
@@ -638,5 +645,30 @@ public class Main {
             System.out.printf(arr[i] + " ");
         }
 
+    }*/
+    //1002
+    static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        for (int i = 0; i < sc.nextInt(); i++) {
+            for (int j = 0; j < 2; j++) {
+                int x1 = sc.nextInt();
+                int y1 = sc.nextInt();
+                int z1 = sc.nextInt();
+                int x2 = sc.nextInt();
+                int y2 = sc.nextInt();
+                int z2 = sc.nextInt();
+                int xval = (x2 - x1) * (x2 - x1);
+                int yval = (y2 - y1) * (y2 - y1);
+                int zval = (z2 - z1) * (z2 - z1);
+                loot(xval, yval, zval);
+            }
+        }
     }
+
+    public static void loot(int xval, int yval, int zval) {
+        int num = (int) Math.sqrt(xval + yval + zval);
+        System.out.println(num);
+    }
+
 }

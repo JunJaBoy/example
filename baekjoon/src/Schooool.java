@@ -1,4 +1,9 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.math.BigInteger;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class Schooool {
     //안현수쌤
@@ -202,7 +207,7 @@ public class Schooool {
         }
     }*/
     //10757
-    static Scanner sc = new Scanner(System.in);
+    /*static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
         String str1 = sc.next();
@@ -235,5 +240,74 @@ public class Schooool {
             sb.append(arr[i]);
         }
         System.out.println(sb);
+    }*/
+    //2675
+    /*static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        BigInteger val = sc.nextBigInteger();
+        BigInteger num = sc.nextBigInteger();
+        System.out.println(val.divide(num));
+        System.out.println(val.remainder(num));
+
+    }*/
+    //4101
+    /*static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+    public static void main(String[] args) throws IOException {
+        while (true){
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
+            if ((a == 0) && (b == 0)) {
+                break;
+            }
+            if (a > b) {
+                System.out.println("Yes");
+            } else {
+                System.out.println("No");
+            }
+        }
+    }*/
+    //10170
+    /*public static void main(String[] args) {
+        System.out.printf("NFC West       W   L  T\n" +
+                "-----------------------\n" +
+                "Seattle        13  3  0\n" +
+                "San Francisco  12  4  0\n" +
+                "Arizona        10  6  0\n" +
+                "St. Louis      7   9  0\n" +
+                "\n" +
+                "NFC North      W   L  T\n" +
+                "-----------------------\n" +
+                "Green Bay      8   7  1\n" +
+                "Chicago        8   8  0\n" +
+                "Detroit        7   9  0\n" +
+                "Minnesota      5  10  1");
+    }*/
+    //5597
+
+    /*static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int[] arr = new int[31];
+
+        for (int i = 1; i < 29; i++) {
+            int comp = sc.nextInt();
+            arr[comp] = 1;
+        }
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] != 1) {
+                System.out.println(i);
+            }
+        }
+
+    }*/
+
+    public static void main(String[] args) {
+        for (int i = 0; i < 100; i++) {
+            System.out.println("I love You");
+        }
     }
+
 }
