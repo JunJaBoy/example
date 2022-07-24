@@ -1,3 +1,5 @@
+package baekjoon;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -646,29 +648,48 @@ public class Main {
         }
 
     }*/
-    //1002
-    static Scanner sc = new Scanner(System.in);
+    //2675
+    /*static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        for (int i = 0; i < sc.nextInt(); i++) {
-            for (int j = 0; j < 2; j++) {
-                int x1 = sc.nextInt();
-                int y1 = sc.nextInt();
-                int z1 = sc.nextInt();
-                int x2 = sc.nextInt();
-                int y2 = sc.nextInt();
-                int z2 = sc.nextInt();
-                int xval = (x2 - x1) * (x2 - x1);
-                int yval = (y2 - y1) * (y2 - y1);
-                int zval = (z2 - z1) * (z2 - z1);
-                loot(xval, yval, zval);
+        int n = sc.nextInt();
+        for (int i = 0; i < n; i++) {
+            int num = sc.nextInt();
+            String string = sc.next();
+            for (int j = 0; j < string.length(); j++) {
+                for (int k = 0; k < num; k++) {
+                    System.out.printf("%c", string.charAt(j));
+                }
+            }
+            System.out.println();
+        }
+    }*/
+    //1157
+    static BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+
+    public static void main(String[] args) throws IOException {
+        String s = bf.readLine();
+        int[] arr = new int[26];
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) > 90) {
+                arr[s.charAt(i) - 'a']++;
+            } else {
+                arr[s.charAt(i) - 'A']++;
             }
         }
-    }
+        int max = -1;
+        char ch = '?';
 
-    public static void loot(int xval, int yval, int zval) {
-        int num = (int) Math.sqrt(xval + yval + zval);
-        System.out.println(num);
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+                ch = (char) (i + 65);
+            } else if (arr[i] == max) {
+                ch = '?';
+            }
+        }
+
+        System.out.println(ch);
     }
 
 }
