@@ -1,13 +1,8 @@
-package baekjoon;
-
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.lang.reflect.Array;
-import java.math.BigInteger;
-import java.nio.charset.StandardCharsets;
-import java.util.*;
+import java.util.Scanner;
+import java.util.StringTokenizer;
 
 import static jdk.nashorn.internal.objects.NativeMath.max;
 import static jdk.nashorn.internal.objects.NativeString.charAt;
@@ -665,31 +660,52 @@ public class Main {
         }
     }*/
     //1157
-    static BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+    /*static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        String str = sc.next().toUpperCase();
+
+        int[] count = new int[26];
+
+        for (int i = 0; i < str.length(); i++) {
+            int num = str.charAt(i) - 'A';
+            count[num]++;
+        }
+
+        int max = 0;
+        char answer = '?';
+        for (int i = 0; i < count.length; i++) {
+            if (max < count[i]) {
+                max = count[i];
+                answer = (char) (i + 'A');
+            } else if (max == count[i]) {
+                answer = '?';
+            }
+        }
+        System.out.println(answer);
+    }*/
+    //1152
+    /*static BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 
     public static void main(String[] args) throws IOException {
-        String s = bf.readLine();
-        int[] arr = new int[26];
-        for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) > 90) {
-                arr[s.charAt(i) - 'a']++;
-            } else {
-                arr[s.charAt(i) - 'A']++;
-            }
-        }
-        int max = -1;
-        char ch = '?';
+        String str = bf.readLine();
+        StringTokenizer st = new StringTokenizer(str);
 
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > max) {
-                max = arr[i];
-                ch = (char) (i + 65);
-            } else if (arr[i] == max) {
-                ch = '?';
-            }
-        }
+        System.out.println(st.countTokens());
 
-        System.out.println(ch);
-    }
+    }*/
+    /*static Scanner sc = new Scanner(System.in);
 
+    public static void main(String[] args) {
+        String s1 = sc.next();
+        String s2 = sc.next();
+
+        String re_s1 = new StringBuffer(s1).reverse().toString();
+        String re_s2 = new StringBuffer(s2).reverse().toString();
+
+        int n1 = Integer.parseInt(re_s1);
+        int n2 = Integer.parseInt(re_s2);
+
+        System.out.println((n1 > n2) ? n1 : n2);
+    }*/
 }
