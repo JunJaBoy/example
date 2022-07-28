@@ -708,4 +708,120 @@ public class Main {
 
         System.out.println((n1 > n2) ? n1 : n2);
     }*/
+    //5622
+    /*static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+
+        String str = sc.next();
+        int cnt = 0;
+
+        for (int i = 0; i < str.length(); i++) {
+            int n = str.charAt(i) - 'A';
+            cnt += getNum(n);
+        }
+
+        System.out.println(cnt);
+
+    }
+
+    public static int getNum(int n) {
+
+        int a = 0;
+
+        if (n >= 0 && n < 3) { // A B C
+            a = 3;
+        } else if (n > 2 && n < 6) { // D E F
+            a = 4;
+        } else if (n > 5 && n < 9) { // G H I
+            a = 5;
+        } else if (n > 8 && n < 12) { // J K L
+            a = 6;
+        } else if (n > 11 && n < 15) { // M N O
+            a = 7;
+        } else if (n > 14 && n < 19) { // P Q R S
+            a = 8;
+        } else if (n > 18 && n < 22) { // T U V
+            a = 9;
+        } else if (n > 21 && n < 26) { // W X Y Z
+            a = 10;
+        }
+
+        return a;
+
+    }*/
+    //2941
+    static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        String str = sc.nextLine();
+        int cnt = 0;
+
+        for (int i = 0; i < str.length(); i++) {
+
+            char ch = str.charAt(i);
+
+            if (ch == 'c') {
+                if (i < str.length() - 1) {
+                    if (str.charAt(i + 1) == '=') {
+                        i++;
+                    } else if (str.charAt(i + 1) == '-') {
+                        i++;
+                    }
+                }
+            }
+
+            else if (ch == 'd') {
+                if (i < str.length() - 1) {
+                    if (str.charAt(i + 1) == 'z') {
+                        if (i < str.length() - 2) {
+                            if (str.charAt(i + 2) == '=') {
+                                i += 2;
+                            }
+                        }
+                    } else if (str.charAt(i + 1) == '-') {
+                        i++;
+                    }
+                }
+            }
+
+            else if (ch == 'l') {
+                if (i < str.length() - 1) {
+                    if (str.charAt(i + 1) == 'j') {
+                        i++;
+                    }
+                }
+            }
+
+            else if (ch == 'n') {
+                if (i < str.length() - 1) {
+                    if (str.charAt(i + 1) == 'j') {
+                        i++;
+                    }
+                }
+            }
+
+            else if (ch == 's') {
+                if (i < str.length() - 1) {
+                    if (str.charAt(i + 1) == '=') {
+                        i++;
+                    }
+                }
+            }
+
+            else if (ch == 'z') {
+                if (i < str.length() - 1) {
+                    if (str.charAt(i + 1) == '=') {
+                        i++;
+                    }
+                }
+            }
+
+            cnt++;
+
+        }
+
+        System.out.println(cnt);
+
+    }
 }
